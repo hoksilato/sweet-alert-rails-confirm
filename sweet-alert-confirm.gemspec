@@ -7,16 +7,15 @@ require "sweet-alert-confirm/version"
 Gem::Specification.new do |s|
   s.name        = "sweet-alert-confirm"
   s.version     = SweetAlertConfirm::VERSION
-  s.authors     = ["Moises Viloria"]
-  s.email       = ["moisesviloria@gmail.com"]
-  s.homepage    = "http://www.github.com/mois3x/sweet-alert-rails-confirm"
-  s.summary     = "A Rails confirm replacement with SweetAlert"
+  s.authors     = ["Moises Viloria", "Cang Ta"]
+  s.email       = ["moisesviloria@gmail.com", "hoksilato176@gmail.com"]
+  s.homepage    = "http://www.github.com/hoksilato/sweet-alert-rails-confirm"
+  s.summary     = "A Rails confirm replacement with SweetAlert 2"
   s.description = ""
   s.license     = "MIT"
 
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   # s.add_dependency "jquery-rails"
-  # s.add_dependency "sweet-alert"
   s.add_development_dependency "rails", ">=3.1"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "capybara", "~> 2.1"

@@ -1,59 +1,53 @@
 sweet-alert-rails-confirm
 =========================
 
-[![Build Status](https://travis-ci.org/mois3x/sweet-alert-rails-confirm.svg?branch=master)](http://travis-ci.org/mois3x/sweet-alert-rails-confirm)
+[![Build Status](https://travis-ci.org/hoksilato/sweet-alert-rails-confirm.svg?branch=master)](http://travis-ci.org/hoksilato/sweet-alert-rails-confirm)
 
 
-A Rails confirm replacement with SweetAlert
-
-depends on https://github.com/t4t5/sweetalert
-
-So you need to Install:
-    gem 'sweet-alert'
-
-Or the latest with:
-    gem 'rails-assets-sweetalert' # Using https://rails-assets.org/ 
+A Rails confirm replacement with SweetAlert depends on https://github.com/t4t5/sweetalert.
 
 ## Requirements
+
 Rails >= 3.1
 
 ## Usage
 
-Add it to your Gemfile:
+Add it to your `Gemfile`:
+
 ```ruby
-gem 'sweet-alert'
 gem 'sweet-alert-confirm'
 ```
 
 Add the following to application.js:
 
 ```javascript
-//= require sweet-alert
+//= require sweetalert.min
 //= require sweet-alert-confirm
 ```
-Add the following to application.css:
 
-```css
-/*
- *= require sweet-alert
- */
+Using the same Rails markup:
+
+```ruby
+= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' }
 ```
 
-### Custom options
+or you can pass options in `data:`
 
-
-You can pass options in `data:`
-```Ruby
- data: {
-  :'sweet-alert-confirm: 'Are you ready?'
-  :'confirm-button-text' => 'Im ready',
-  :'cancel-button-text' => 'No way',
-  :'confirm-button-color' => '#66CD00',
-  :'sweet-alert-type' => 'info',
-  text: 'This is a subtitle',
-  :'image-url' => '/pic.png'
+```ruby
+= link_to 'Delete', item, method: :delete, data: {
+  'sweet-alert-confirm': 'Are you ready?'
+  'confirm-button-text': 'Im ready',
+  'cancel-button-text': 'No way',
+  'confirm-button-color': '#66CD00',
+  'sweet-alert-type': 'info',
+  'text': 'This is a subtitle',
+  'image-url': '/pic.png'
 }
 ```
+
+Current supporting Rails view helpers: `link_to`, `submit_tag` and `button_tag`.
+
+### Custom options
 
 ![Custom confirm](https://cloud.githubusercontent.com/assets/5833678/4653700/14389916-54b0-11e4-9850-14ee970e9345.png)
 
