@@ -53,6 +53,20 @@ Current supporting Rails view helpers: `link_to`, `submit_tag` and `button_tag`.
 
 Default options that will be used application wide so it is not nessecary to set the option on each link. Put this object inside your app to override default options with `sweetAlertConfirmConfig` object.
 
+```
+text
+title
+icon (~ type)
+button (confirm button)
+buttons (thứ tự: cancel, confirm)
+content
+className
+closeOnClickOutside
+closeOnEsc
+dangerMode
+timer
+```
+
 ```Javascript
 var sweetAlertConfirmConfig = {
   title: 'Are you sure?',
